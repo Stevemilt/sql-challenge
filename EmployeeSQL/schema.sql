@@ -1,4 +1,4 @@
--- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 
@@ -57,3 +57,7 @@ REFERENCES "employees" ("emp_no");
 
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
+
+ALTER TABLE "titles" ADD CONSTRAINT "fk_titles_title_id" FOREIGN KEY("title_id")
+REFERENCES "employees" ("emp_title_id");
+
