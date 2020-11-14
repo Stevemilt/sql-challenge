@@ -10,16 +10,6 @@ CREATE TABLE "departments" (
      )
 );
 
-CREATE TABLE "emp_department" (
-    "emp_no" INT   NOT NULL,
-    "dept_no" VARCHAR   NOT NULL
-);
-
-CREATE TABLE "dept_manager" (
-    "dept_no" VARCHAR   NOT NULL,
-    "emp_no" INT   NOT NULL
-);
-
 CREATE TABLE "employees" (
     "emp_no" INT   NOT NULL,
     "emp_title_id" VARCHAR   NOT NULL,
@@ -31,6 +21,16 @@ CREATE TABLE "employees" (
     CONSTRAINT "pk_employees" PRIMARY KEY (
         "emp_no"
      )
+);
+
+CREATE TABLE "emp_department" (
+    "emp_no" INT   NOT NULL,
+    "dept_no" VARCHAR   NOT NULL
+);
+
+CREATE TABLE "dept_manager" (
+    "dept_no" VARCHAR   NOT NULL,
+    "emp_no" INT   NOT NULL
 );
 
 CREATE TABLE "salaries" (
